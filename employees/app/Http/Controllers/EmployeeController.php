@@ -30,18 +30,13 @@ class EmployeeController extends Controller
             'department' => 'required|string|max:255',
         ]);
 
-        // Save the employee data to the database
         $employee = Employee::create($validated);
 
-        // Convert data to JSON
         $jsonData = json_encode($employee->toArray(), JSON_PRETTY_PRINT);
         Storage::disk('local')->put('employees.json', $jsonData);
 
-        // Append data to CSV
         $csvData = implode(',', $employee->toArray()) . "\n";
         Storage::disk('local')->append('employees.csv', $csvData);
-
-        // Show all employee profile pulled from json or csv in a new screen
 
         return redirect()->route('employees.create')->with('success', 'Employee added successfully.');
         
@@ -49,11 +44,9 @@ class EmployeeController extends Controller
 
     public function showProfiles()
     {
-        // Read JSON file
         $jsonPath = storage_path('app/employees.json');
         $jsonData = file_exists($jsonPath) ? json_decode(file_get_contents($jsonPath), true) : [];
 
-        // Read CSV file
         $csvPath = storage_path('app/employees.csv');
         $csvData = [];
         if (file_exists($csvPath)) {
@@ -63,8 +56,6 @@ class EmployeeController extends Controller
             }
             fclose($file);
         }
-
-        // Pass data to the view
         return view('profile', compact('jsonData', 'csvData'));
     }
 }

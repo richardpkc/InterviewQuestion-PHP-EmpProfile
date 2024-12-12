@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Profiles</title>
-    <!-- Add Bootstrap CSS (latest version) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ3Qah5EA4Ki1JtU9x9ZG1LQn4rtLr2dV/4n1JGjHeHhEl8cgmhVjLkKovl6" crossorigin="anonymous">
     <style>
-        /* Dark Background for the whole page */
         body {
             background-color: #121212;
             color: #e0e0e0;
             font-family: Arial, sans-serif;
         }
 
-        /* Card Background */
         .card {
             background-color: #1e1e1e;
             border-radius: 10px;
@@ -22,7 +19,6 @@
             margin-bottom: 20px;
         }
 
-        /* Table Styling */
         .table {
             background-color: #1e1e1e;
             color: #e0e0e0;
@@ -40,12 +36,10 @@
             color: #fff;
         }
 
-        /* Striped Rows */
         .table-striped tbody tr:nth-child(odd) {
             background-color: #2a2a2a;
         }
 
-        /* Highlight for important text */
         h1 {
             color: #64b5f6;
         }
@@ -54,14 +48,12 @@
             color: #90caf9;
         }
 
-        /* Responsive design for better mobile experience */
         @media (max-width: 767px) {
             .table th, .table td {
                 font-size: 12px;
             }
         }
 
-        /* Button Styling */
         .btn {
             background-color: #64b5f6;
             border-color: #64b5f6;
@@ -160,7 +152,6 @@
         </div>
     </div>
 
-    <!-- Add Bootstrap JS (for any interactive components) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-JVd5nJ1n6Xeoh1st39uLf05zNLCXkqlr4yo8N5BXz2k2XNWRqYYrZd8t6DhoPpjd" crossorigin="anonymous"></script>
 </body>
 </html>
